@@ -1,0 +1,137 @@
+.unsupported {
+  align-items: center;
+  background-color: $color-black;
+  cursor: default;
+  display: flex;
+  height: 100%;
+  left: 0;
+  padding-left: 10rem;
+  padding-top: 10rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  &:before {
+    background: rgba($color-black, 0.5);
+    bottom: 0;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &:not(.unsupported--disabled) {
+    background-image: url('../assets/unsupported.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &--disabled {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  @include media('<small') {
+    padding-left: 0;
+    padding-top: 0;
+  }
+}
+
+.unsupported__wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  @include media('<small') {
+    padding: 0 1.5rem;
+  }
+}
+
+.unsupported__logo {
+  font: 1.6rem $font-apercu-pro-bold;
+  left: 10rem;
+  position: absolute;
+  top: 5rem;
+
+  @include media('<small') {
+    left: 1.5rem;
+    top: 2rem;
+  }
+}
+
+.unsupported__title {
+  font: 6.4rem/1.22 $font-apercu-pro-regular;
+  letter-spacing: 0.185rem;
+  margin-bottom: 6rem;
+
+  @include media('<small') {
+    font-size: 4rem;
+    letter-spacing: 0.12rem;
+    line-height: 1.33;
+    margin-bottom: 3rem;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.unsupported__subtitle {
+  font: 1.8rem $font-apercu-pro-bold;
+  margin-bottom: 1.5rem;
+}
+
+.unsupported__description {
+  font: 3.2rem $font-apercu-pro-regular;
+  letter-spacing: 0.1rem;
+  line-height: 1.53;
+  margin-bottom: 14rem;
+
+  a {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  @include media('<small') {
+    font-size: 1.7rem;
+    line-height: 1.56;
+    margin-bottom: 5.5rem;
+    width: 35rem;
+  }
+}
+
+.unsupported__columns {
+  align-items: center;
+  display: flex;
+
+  @include media('<small') {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+
+.unsupported__column {
+  &:last-child {
+    margin-left: 21rem;
+  }
+
+  @include media('<small') {
+    &:last-child {
+      margin-left: 0;
+      margin-top: 4rem;
+    }
+  }
+}
+
+.unsupported__link {
+  cursor: pointer;
+  font: 1.8rem $font-apercu-pro-regular;
+
+  &:not(:first-child) {
+    margin-left: 3rem;
+  }
+}

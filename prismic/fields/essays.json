@@ -1,0 +1,44 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Title"
+      }
+    },
+    "list" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "text" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Text"
+            }
+          },
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "label" : "Link"
+            }
+          }
+        },
+        "label" : "List"
+      }
+    },
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em, hyperlink",
+        "label" : "Description"
+      }
+    },
+    "link" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Link"
+      }
+    }
+  }
+}

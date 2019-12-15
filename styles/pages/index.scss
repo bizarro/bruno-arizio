@@ -1,0 +1,39 @@
+.index {
+  @extend %section;
+}
+
+.index__link {
+  pointer-events: none;
+  position: absolute;
+
+  &--active {
+    pointer-events: auto;
+  }
+}
+
+.index__link__arrow {
+  bottom: 3.3rem;
+  fill: none;
+  height: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: -4rem;
+  stroke: $color-white;
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+  visibility: hidden;
+  width: 1.5rem;
+
+  .index__link--active & {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .index__link:hover & {
+    transform: translateY(-1rem);
+  }
+
+  .index--safari & {
+    transition: transform 0.4s ease;
+  }
+}

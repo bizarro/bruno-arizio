@@ -1,0 +1,54 @@
+extends ../base.pug
+
+include ../utils/mixins.pug
+
+block variables
+  - var slug = 'essays'
+
+block body
+  section.essays
+    .essays__wrapper
+      .essays__title
+        span.essays__title__dash
+        !=PrismicDOM.RichText.asHtml(essays.data.title)
+        span.essays__title__dash
+
+      .essays__list
+        span.essays__list__dash
+
+        ul.essays__list__wrapper
+          each item, index in essays.data.list
+            li.essays__list__item
+              a.essays__list__item__link(data-link href=item.link.url target="_blank")
+                span.essays__list__item__link__wrapper
+                  span.essays__list__item__link__text!=item.text
+
+                  span.essays__list__item__link__text.essays__list__item__link__text--link
+                    span=essays.data.link
+
+                    svg.essays__list__item__link__text__arrow(data-link-arrow viewBox="0 0 9.2 9.2" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M8.7,2.3v6.3H2.3 M8.7,8.7L0.4,0.4")
+
+                span.essays__list__item__dash
+
+      .essays__description!=PrismicDOM.RichText.asHtml(essays.data.description)
+
+      .essays__about
+        .essays__about__description.essays__about__description--biography!=PrismicDOM.RichText.asHtml(about.data.description)
+
+        .essays__about__columns
+          .essays__about__columns__column
+            h2.essays__about__subtitle=about.data.contact_title
+
+            p.essays__about__description
+              each contact, index in about.data.contact_list
+                span.essays__about__description__line
+                  a.essays__about__link(data-link href=contact.link.url)=contact.text
+
+          .essays__about__columns__column
+            h2.essays__about__subtitle=about.data.social_title
+
+            p.essays__about__description
+              each social, index in about.data.social_list
+                span.essays__about__description__line
+                  a.essays__about__link(data-link href=social.link.url target="_blank")=social.text

@@ -1,0 +1,63 @@
+block variables
+
+doctype html
+html(lang="en")
+  head
+    title=meta.data.title
+
+    meta(name="description" content=meta.data.description)
+
+    style.
+      html { background: #050505; } body { opacity: 0; overflow: hidden; }
+
+    link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+    link(rel="manifest" href="/site.webmanifest")
+    link(rel="mask-icon" href="/safari-pinned-tab.svg" color="#f32324")
+    meta(name="msapplication-TileColor" content="#da532c")
+    meta(name="theme-color" content="#ffffff")
+
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    meta(property="og:type" content="website")
+    meta(property="og:title" content=meta.data.title)
+    meta(property="og:description" content=meta.data.description)
+    meta(property="og:image" content=meta.data.image ? meta.data.image.url : '')
+
+    meta(name="twitter:card" content="summary")
+    meta(name="twitter:title" content=meta.data.title)
+    meta(name="twitter:description" content=meta.data.description)
+    meta(name="twitter:image" content=meta.data.image ? meta.data.image.url : '')
+
+    link(rel="preload" href="/main.css" as="style" onload="this.onload = function () {}; this.rel = 'stylesheet';")
+
+    noscript
+      link(rel="stylesheet" href="/main.css")
+
+  body
+    include shared/navigation.pug
+
+    .content(data-slug=slug)
+      block body
+
+    include functionals/javascript-screen.pug
+    include functionals/unsupported-screen.pug
+    include functionals/webgl-screen.pug
+
+    script.
+      window.APP = {
+        Projects: !{JSON.stringify(projects)}
+      }
+
+    script(async src="/main.js")
+    script(async src="https://www.googletagmanager.com/gtag/js?id=" + analytics)
+    script.
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+      gtag('config', '!{analytics}');

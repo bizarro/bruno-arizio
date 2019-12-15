@@ -1,0 +1,16 @@
+{
+  "Main" : {
+    "scroll" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Scroll"
+      }
+    },
+    "link" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Link"
+      }
+    }
+  }
+}

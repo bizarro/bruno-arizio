@@ -1,0 +1,166 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "ID"
+      }
+    },
+    "name" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Name"
+      }
+    },
+    "highlight" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Yes", "No" ],
+        "default_value" : "Yes",
+        "label" : "Highlight"
+      }
+    },
+    "type" : {
+      "type" : "Select",
+      "config" : {
+        "options" : [ "Black", "White" ],
+        "default_value" : "Black",
+        "label" : "Type"
+      }
+    },
+    "label" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Label"
+      }
+    },
+    "year" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "Year"
+      }
+    },
+    "description" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Description"
+      }
+    }
+  },
+  "Content" : {
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "choices" : {
+          "highlight" : {
+            "type" : "Slice",
+            "fieldset" : "Highlight",
+            "description" : "Highlights",
+            "icon" : "wrap_text",
+            "display" : "list",
+            "non-repeat" : {
+              "highlight" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Highlight"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "image" : {
+            "type" : "Slice",
+            "fieldset" : "Image",
+            "description" : "Images",
+            "icon" : "image",
+            "display" : "list",
+            "non-repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "video" : {
+            "type" : "Slice",
+            "fieldset" : "Video",
+            "description" : "Videos",
+            "icon" : "videocam",
+            "display" : "list",
+            "non-repeat" : {
+              "mp4" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "MP4"
+                }
+              },
+              "height" : {
+                "type" : "Number",
+                "config" : {
+                  "label" : "Height"
+                }
+              },
+              "width" : {
+                "type" : "Number",
+                "config" : {
+                  "label" : "Width"
+                }
+              }
+            },
+            "repeat" : { }
+          }
+        }
+      }
+    }
+  },
+  "Covers" : {
+    "phone" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Phone"
+      }
+    },
+    "tablet" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Tablet"
+      }
+    },
+    "desktop" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Desktop"
+      }
+    }
+  },
+  "Titles" : {
+    "fill" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Fill"
+      }
+    },
+    "stroke" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Stroke"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+extends ../base.pug
+
+include ../utils/mixins.pug
+
+block variables
+  - var slug = 'index'
+
+block body
+  section.index
+    each project, index in projects
+      a.index__link(href=`/case/${project.uid}` data-link)
+        +link-arrow-diagonal('index__link__arrow')

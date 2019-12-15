@@ -1,0 +1,15 @@
+nav.navigation
+  a.navigation__link(data-link href="/")
+    span.navigation__link__wrapper(data-link-magnet)
+      span
+        span.navigation__link__text=navigation.data.logo
+
+    span.navigation__link__dot
+
+  each link in navigation.data.links
+    a.navigation__link(data-link href=link.link)
+      span.navigation__link__wrapper(data-link-magnet)
+        span
+          span.navigation__link__text=link.text
+
+      span.navigation__link__dot

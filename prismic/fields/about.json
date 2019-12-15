@@ -1,0 +1,108 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1, hyperlink",
+        "allowTargetBlank" : true,
+        "label" : "Title"
+      }
+    },
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, hyperlink",
+        "allowTargetBlank" : true,
+        "label" : "Description"
+      }
+    },
+    "contact_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Contact Title"
+      }
+    },
+    "contact_list" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "text" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Text"
+            }
+          },
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "allowTargetBlank" : true,
+              "label" : "Link"
+            }
+          }
+        },
+        "label" : "Contact List"
+      }
+    },
+    "social_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Social Title"
+      }
+    },
+    "social_list" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "text" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Text"
+            }
+          },
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "allowTargetBlank" : true,
+              "label" : "Link"
+            }
+          }
+        },
+        "label" : "Social List"
+      }
+    },
+    "awards_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Awards Title"
+      }
+    },
+    "awards_list" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "text" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Text"
+            }
+          },
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "allowTargetBlank" : true,
+              "label" : "Link"
+            }
+          }
+        },
+        "label" : "Awards List"
+      }
+    },
+    "credits" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "hyperlink",
+        "label" : "Credits"
+      }
+    }
+  }
+}

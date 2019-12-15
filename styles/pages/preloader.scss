@@ -1,0 +1,23 @@
+.preloader {
+  align-items: center;
+  bottom: 50%;
+  display: flex;
+  font: 2.5rem $font-apercu-pro-regular;
+  left: 10rem;
+  position: absolute;
+  transform: translateY(50%);
+
+  @include media('<small') {
+    left: 1.5rem;
+  }
+}
+
+.preloader__text {
+  height: 2.5rem;
+  overflow: hidden;
+
+  span {
+    display: block;
+    height: 2.5rem;
+  }
+}

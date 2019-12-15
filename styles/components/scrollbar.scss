@@ -1,0 +1,25 @@
+.scrollbar {
+  height: 100%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: scaleX(1);
+  transform-origin: center right;
+  transition: transform 0.2s linear;
+  width: 0.4rem;
+  z-index: 100;
+
+  @include media('<small') {
+    width: 0.2rem;
+  }
+}
+
+.scrollbar_thumb {
+  background-color: $color-white;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

@@ -1,0 +1,25 @@
+@import '../utils/variables';
+
+@font-face {
+  font-family: $font-apercu-pro-bold;
+  src: url('../fonts/apercu-pro-bold.woff2') format('woff2'),
+       url('../fonts/apercu-pro-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-apercu-pro-medium;
+  src: url('../fonts/apercu-pro-medium.woff2') format('woff2'),
+       url('../fonts/apercu-pro-medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-apercu-pro-regular;
+  src: url('../fonts/apercu-pro-regular.woff2') format('woff2'),
+       url('../fonts/apercu-pro-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

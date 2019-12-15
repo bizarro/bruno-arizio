@@ -1,0 +1,30 @@
+{
+  "Main" : {
+    "logo" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Logo"
+      }
+    },
+    "links" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "text" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Text"
+            }
+          },
+          "link" : {
+            "type" : "Text",
+            "config" : {
+              "label" : "Link"
+            }
+          }
+        },
+        "label" : "Links"
+      }
+    }
+  }
+}

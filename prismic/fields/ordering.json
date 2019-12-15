@@ -1,0 +1,20 @@
+{
+  "Main" : {
+    "list" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "project" : {
+            "type" : "Link",
+            "config" : {
+              "select" : "document",
+              "customtypes" : [ "project" ],
+              "label" : "Project"
+            }
+          }
+        },
+        "label" : "List"
+      }
+    }
+  }
+}

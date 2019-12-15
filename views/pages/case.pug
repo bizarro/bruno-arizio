@@ -1,0 +1,46 @@
+extends ../base.pug
+
+include ../utils/mixins.pug
+
+block variables
+  - var slug = 'case'
+
+block body
+  button.case__header__button
+    span.case__header__button__text=cases.data.scroll
+    +link-arrow-bottom('case__header__button__arrow')
+
+  section.case(class=`case--${project.data.type.toLowerCase()}` data-index=projectIndex)
+    header.case__header
+      h1.case__header__title=project.data.name
+
+    .case__content
+      .case__content__wrapper
+        section.case__information
+          .case__information__columns
+            p.case__information__text=project.data.label
+            p.case__information__text=`/${project.data.year}`
+
+          p.case__information__description=project.data.description
+
+        each item, index in project.data.body
+          if (item.slice_type === 'image')
+            figure.case__image(style=`max-width: ${Math.min(item.primary.image.dimensions.width, 1920)}px`)
+              span.case__image__wrapper(style=`padding-top: ${item.primary.image.dimensions.height / item.primary.image.dimensions.width * 100}%;`)
+                img.case__image__media(src=item.primary.image.url)
+
+          if (item.slice_type === 'highlight')
+            section.case__highlight
+              p.case__highlight__text!=`${item.primary.highlight}&nbsp;`
+
+          if (item.slice_type === 'video')
+            .case__video(style=`padding-top: ${item.primary.height / item.primary.width * 100}%;`)
+              video.case__video__media(autoplay loop playsinline muted src=item.primary.mp4)
+
+        footer.case__footer
+          span.case__footer__label=cases.data.link
+
+          span.case__footer__wrapper
+            a.case__footer__button(href=`/case/${related.uid}` data-link)
+              span.case__footer__button__text(data-text=`${related.data.name}`)=related.data.name
+              +link-arrow-diagonal('case__footer__button__arrow')

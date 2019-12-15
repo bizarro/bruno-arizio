@@ -1,0 +1,39 @@
+extends ../base.pug
+
+include ../utils/mixins.pug
+
+block variables
+  - var slug = 'about'
+
+block body
+  section.about
+    .about__wrapper
+      .about__title!=PrismicDOM.RichText.asHtml(about.data.title)
+
+      .about__description.about__description--biography!=PrismicDOM.RichText.asHtml(about.data.description)
+
+      .about__columns
+        .about__columns__column
+          h2.about__subtitle=about.data.contact_title
+
+          p.about__description
+            each contact, index in about.data.contact_list
+              span.about__description__line
+                a.about__link(href=contact.link.url)=contact.text
+
+          h2.about__subtitle=about.data.awards_title
+
+          p.about__description
+            each award, index in about.data.awards_list
+              span.about__description__line
+                a.about__link=award.text
+
+        .about__columns__column
+          h2.about__subtitle=about.data.social_title
+
+          p.about__description
+            each social, index in about.data.social_list
+              span.about__description__line
+                a.about__link(href=social.link.url target="_blank")=social.text
+
+      .about__description.about__description--credits!=PrismicDOM.RichText.asHtml(about.data.credits)

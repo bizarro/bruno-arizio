@@ -1,0 +1,28 @@
+extends ../base.pug
+
+include ../utils/mixins.pug
+
+block variables
+  - var slug = 'home'
+
+block body
+  section.home
+    each project, index in projects
+      article.home__project(class=`${index === 0 ? 'home__project--active' : ''}`)
+        h2.home__project__title=project.data.name
+
+        a.home__project__link(href=`/case/${project.uid}` data-link)
+          span.home__project__link__wrapper
+            span.home__project__link__text=home.data.explore
+            +link-arrow-right('home__project__link__arrow')
+
+    if isPhone
+      svg.home__progress(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 84")
+        path.home__progress__circle(d="M82,42c0,22.1-17.9,40-40,40S2,64.1,2,42S19.9,2,42,2S82,19.9,82,42z")
+        path.home__progress__path(d="M82,42c0,22.1-17.9,40-40,40S2,64.1,2,42S19.9,2,42,2S82,19.9,82,42z")
+
+    p.home__pagination
+      span.home__pagination__wrapper
+        span.home__pagination__number 1
+        span.home__pagination__separator
+        span.home__pagination__number=projects.length

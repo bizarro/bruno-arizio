@@ -1,0 +1,22 @@
+{
+  "Main" : {
+    "explore" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Explore"
+      }
+    },
+    "scroll" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Scroll"
+      }
+    },
+    "go" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Go To"
+      }
+    }
+  }
+}

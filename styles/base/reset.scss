@@ -1,0 +1,101 @@
+html {
+  box-sizing: border-box;
+  cursor: none;
+  font-size: 10px;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  @include media('<=1728px') {
+    font-size: 9px;
+  }
+
+  @include media('<=1536px') {
+    font-size: 8px;
+  }
+
+  @include media('<=1344px') {
+    font-size: 7px;
+  }
+
+  @include media('<=1152px') {
+    font-size: 6px;
+  }
+
+  @include media('<=960px') {
+    font-size: 5px;
+  }
+
+  @include media('<=768px') {
+    font-size: 4px;
+  }
+
+  @include media('<768px') {
+    font-size: 10px;
+  }
+}
+
+body {
+  background: $color-black-lighter;
+  color: $color-white;
+  position: fixed;
+  height: 100%;
+  opacity: 1;
+  overflow: hidden;
+  overscroll-behavior: contain;
+  user-select: none;
+  width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+a {
+  color: inherit;
+  cursor: none;
+  outline: none;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  border-radius: none;
+  color: inherit;
+  cursor: none;
+  font: inherit;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
