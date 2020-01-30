@@ -42,7 +42,7 @@
     "css-loader": "^3.0.0",
     "cssnano": "^4.1.10",
     "dat.gui": "^0.7.6",
-    "eslint": "~4.8.0",
+    "eslint": "~4.18.2",
     "eslint-config-airbnb-base": "~12.0.1",
     "eslint-plugin-import": "~2.7.0",
     "fg-loadcss": "^2.1.0",
