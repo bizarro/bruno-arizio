@@ -51,7 +51,7 @@
     "glsl-curl-noise": "^0.0.4",
     "glsl-noise": "^0.0.0",
     "glslify-loader": "^2.0.0",
-    "gsap": "^2.1.3",
+    "gsap": "^3.6.0",
     "html-webpack-plugin": "^3.2.0",
     "include-media": "^1.4.9",
     "locomotive-scroll": "^3.2.1",
