@@ -23,7 +23,7 @@
     "nodemon": "^1.17.3",
     "prismic-dom": "~2.0.4",
     "prismic-javascript": "~1.4.0",
-    "pug": "~2.0.0-rc.2",
+    "pug": "~3.0.1",
     "request": "~2.83.0",
     "ua-parser-js": "^0.7.20"
   },
