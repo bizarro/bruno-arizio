@@ -25,7 +25,7 @@
     "prismic-javascript": "~1.4.0",
     "pug": "~2.0.0-rc.2",
     "request": "~2.83.0",
-    "ua-parser-js": "^0.7.20"
+    "ua-parser-js": "^0.7.24"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
