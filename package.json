@@ -56,7 +56,7 @@
     "include-media": "^1.4.9",
     "locomotive-scroll": "^3.2.1",
     "mini-css-extract-plugin": "^0.7.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "normalize-wheel": "^1.0.1",
     "postcss-loader": "^3.0.0",
     "query-string": "^6.8.1",
